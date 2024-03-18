@@ -1,10 +1,30 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-image:         linear-gradient(to bottom right, #6bfff7, #4b8e7f, #000000);
+    background-image: -webkit-linear-gradient(#000000 15%, #6bfff7);
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 img {
     height: 100px;
     width: 100px;
+}
+
+h1 {
+    color: azure;
+}
+
+.navbar{
+    background-color: #000000;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28240, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-text,
+.navbar-brand,
+.nav-link {
+    color: azure !important;
 }
