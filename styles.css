@@ -1,4 +1,10 @@
-* {
+body {
     padding: 0px;
     margin: 0px;
+    background-image:         linear-gradient(to bottom right, #6bfff7, #4b8e7f, #000000);
+}
+
+img {
+    height: 100px;
+    width: 100px;
 }
