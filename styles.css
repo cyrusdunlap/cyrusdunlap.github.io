@@ -13,7 +13,7 @@ img {
 }
 
 h1 {
-    color: azure;
+    color: #fafb63;
 }
 
 .navbar{
@@ -26,5 +26,5 @@ h1 {
 .navbar-text,
 .navbar-brand,
 .nav-link {
-    color: azure !important;
+    color: #fafb63 !important;
 }
