@@ -1,22 +1,40 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-image: -webkit-linear-gradient(#000000 15%, #6bfff7);
+    background-image: linear-gradient(to bottom right, #000000 , #6bfff7, #000000);
+    background-repeat: no-repeat;
     font-family: "Aldrich", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-img {
-    height: 300px;
-    width: 300px;
+main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    
 }
 
-h1 {
+main img {
+    grid-column: 3/6;
+    grid-row: 3/6;
+    height: 500px;
+    border-radius: 6px;
+    justify-self: center;
+}
+
+main header {
+    grid-column:  1/3;
+    grid-row: 3;
     color: #fafb63;
+    font-size: 50px;
 }
 
 .navbar{
+    position: sticky;
     background-color: black;
 }
 .navbar-toggler-icon {
