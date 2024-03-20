@@ -1,3 +1,7 @@
+:root {
+    --yellow-color: #fafb63;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -8,29 +12,168 @@ body {
     font-style: normal;
 }
 
-main {
+.container {
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(6 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(4 100px);
+    grid-template-rows: repeat(4, 100px);
     
 }
 
-main img {
-    grid-column: 3/6;
-    grid-row: 3/6;
-    height: 500px;
-    border-radius: 6px;
-    justify-self: center;
+.item1 {
+    grid-column: 1;
+    grid-row: 2;
+    color: #fafb63;
+    font-size: 70px;
 }
 
-main header {
-    grid-column:  1/3;
+.item2 {
+    grid-column: 1;
     grid-row: 3;
     color: #fafb63;
-    font-size: 50px;
+    font-size: 40px;
+}
+
+.multiple-text {
+    color: #000000;
+    font-weight: 900;
+}
+
+.item3 {
+    grid-column: 1/2;
+    grid-row: 4;
+    color: #000000;
+    font-size: large;
+}
+
+.box {
+    grid-column: 4;
+    grid-row: 2/4;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg, white, #fafb63);
+    transition: 0.5s;
+    animation: boxAnimate 4s linear infinite;
+}
+
+.box:hover::before{
+    inset: -20px 0px;
+}
+@keyframes boxAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background:#000000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 10px;
+    border: 6px solid #000000;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item4 {
+    grid-column: 3;
+    grid-row: 4;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.item4::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 10px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background: #000000;
+    border-radius: 50%;
+    animation: shadowAnimation 1.6s infinite;
+}
+
+@keyframes shadowAnimation {
+    25% {
+        width: 50px;
+        height: 10px;
+    }
+    50% {
+        width: 57px;
+        height: 10px;
+    }
+    75% {
+        width: 50px;
+        height: 10px;
+    }
+}
+
+.item4 .ball {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    background: var(--yellow-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--yellow-color), 0
+    0 30px var(--yellow-color);
+    animation: ballAnimation 1.6s infinite;
+}
+@keyframes ballAnimation {
+    5% {
+        height: 50px;
+        width: 50px;
+    }
+    20% {
+        height: 60px;
+    }
+    30% {
+        height: 50px;
+        width: 50px;
+    }
+    50% {
+        height: 45px;
+        width: 60px;
+        transform: translateY(260px);
+    }
+    75% {
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .navbar{
@@ -43,6 +186,10 @@ main header {
 
 .navbar-text,
 .navbar-brand,
-.nav-link {
+.nav-link{
     color: #fafb63 !important;
+}
+
+.nav-link:hover {
+    color: #4B8E7F !important;
 }
