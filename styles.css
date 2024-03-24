@@ -20,34 +20,33 @@ body {
 .container {
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(4 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(5 auto);
+    grid-template-rows: repeat(5, auto);
     
 }
 
 .item1 {
-    grid-column: 1;
+    grid-column: 1/3;
     grid-row: 2;
     color: #fafb63;
-    font-size: 70px;
+    text-shadow: 1px 1px 2px #000000;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.item1 p{
+    color: #000000;
+    text-shadow: 1px 1px 2px #fafb63;
+    font-size: 22px;
 }
 
 .item2 {
-    grid-column: 1;
-    grid-row: 3;
-    color: #fafb63;
-    font-size: 40px;
-}
-
-.item3 {
-    grid-column: 1/2;
-    grid-row: 4;
-    color: #000000;
-    font-size: large;
+    grid-row: 5;
+    justify-content: center;
 }
 
 .box {
-    grid-column: 4;
+    grid-column: 5;
     grid-row: 2/4;
     position: relative;
     width: 500px;
@@ -107,7 +106,7 @@ body {
 
 .item4 {
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 1/4;
     position: relative;
     width: 300px;
     height: 300px;
@@ -176,6 +175,52 @@ body {
     }
 }
 
+.container2 {
+    padding: 5px;
+    margin: 5px;
+    grid-column: 1/5;
+    grid-row: 3 ;
+    justify-content: center;
+}
+
+.socialBtn button {
+    position: relative;
+    height: 40px;
+    width: 120px;
+    background: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #6bfff7;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.socialBtn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #6bfff7;
+    z-index: -1;
+    transition: .5s;
+}
+
+.socialBtn button:hover::before {
+    width: 100%;
+}
+
+.socialBtn button:hover {
+    color: #000000;
+}
+
+/* css for bootstrap .navbar */
+
 .navbar{
     position: sticky;
     background-color: black;
@@ -193,6 +238,8 @@ body {
 .nav-link:hover {
     color: #4B8E7F !important;
 }
+
+/* this css is for the projects.html */
 
 .parent {
     margin: 1rem;
@@ -319,3 +366,52 @@ input:checked + label .description {
     overflow: hidden;
 }
 
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btnHeader{
+    padding: 20px;
+    color: #fafb63;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: 700;
+}
+
+.btn-box button {
+    position: relative;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    background: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #6bfff7;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #6bfff7;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box button:hover::before {
+    width: 100%;
+}
+
+.btn-box button:hover {
+    color: #000000;
+}
