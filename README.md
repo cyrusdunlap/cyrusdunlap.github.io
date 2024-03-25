@@ -1,14 +1,13 @@
-## Cyrus Dunlap 1st Repo
-This is my first repository for a project that I did for a coding challenge.  I hope to add many more exciting projects in the future.
-## History of Pittsburgh Penguins
-This was some fun facts about the Pittsburgh Penguins.
-## Installation
-Currently there is no installation and I'm not sure why you would want to.
-## Usage
-Open in your browser, that's about it.
-## Support
-555- Im not giving  you my number...
-## Roadmap
-I'm going to abandon this project and move to Mexico!
-## License information
-Do what you want.
+# My Profile Page
+I made this website showcasing what I have worked on so far.  This includes links to my projects and how I have brought everything together.
+
+## How to run
+1. Download the files
+2. Drag index.html file into blank browser
+3. Use the nav bar and buttons to move around site.
+4. Also contains a video and interactive elements
+
+## Future Improvements 
+Adding more projects to the page.
+
+## License
